@@ -1,0 +1,69 @@
+@import "@fontsource/montserrat";
+
+:root {
+  --light-bg: #f5f3f6;
+  --light-grey-bg: #e6e4e7;
+  --light-border-color: rgba(235, 235, 235, 1);
+  --light-border-hover: rgba(189, 189, 189, 1);
+  --light-action-color: rgba(144, 122, 247, 1);
+  --light-title: rgba(0, 0, 0, 1);
+  --light-text: rgba(60, 60, 60, 0.66);
+
+  --dark-bg: #222222;
+  --dark-grey-bg: #282828;
+  --dark-border-color: rgba(235, 235, 235, 0.64);
+  --dark-border-hover: rgba(189, 189, 189, 0.64);
+  --dark-action-color: rgba(144, 122, 247, 1);
+  --dark-title: rgba(235, 235, 235, 0.64);
+  --dark-text: rgba(235, 235, 235, 0.64);
+}
+
+:root {
+  --color-background: var(--light-bg);
+  --color-background2: var(--light-grey-bg);
+  --color-border: var(--light-border-color);
+  --color-border-hover: var(--light-border-hover);
+  --color-action: var(--light-action-color);
+  --color-heading: var(--light-title);
+  --color-text: var(--light-text);
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--dark-bg);
+    --color-background2: var(--dark-grey-bg);
+    --color-border: var(--dark-border-color);
+    --color-border-hover: var(--dark-border-hover);
+    --color-action: var(--dark-action-color);
+    --color-heading: var(--dark-title);
+    --color-text: var(--dark-text);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+}
