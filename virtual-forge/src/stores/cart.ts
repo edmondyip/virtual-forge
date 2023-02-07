@@ -45,7 +45,6 @@ export const useCart = defineStore("cart", () => {
 
   const total = computed(() => {
     const store = useProduct();
-
     return Object.keys(cart.value.cart).reduce((total, id) => {
       return (
         total + store.products.items[id].price * cart.value.cart[id].quantity
