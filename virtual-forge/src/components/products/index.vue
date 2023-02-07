@@ -5,18 +5,22 @@ import ShoppingCart from "../cart/index.vue";
 </script>
 
 <template lang="pug">
-.products.container
+.product-gallery.container
   ProductSort.sort
   ProductList.list
   ShoppingCart.cart
 </template>
 
 <style lang="scss" scoped>
-.products {
+.product-gallery {
   display: grid;
   gap: 16px;
   grid-template-areas: "sort cart" "list cart";
   grid-template-columns: 75% 25%;
+  @media (max-width: 768px) {
+    display: block;
+    padding: 16px;
+  }
   .sort {
     grid-area: sort;
   }

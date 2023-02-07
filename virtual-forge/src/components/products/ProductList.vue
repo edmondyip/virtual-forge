@@ -25,6 +25,9 @@ ul.products {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  @media (max-width: 768px) {
+    display: block;
+  }
   li {
     padding: 16px;
     background: #ffffff;
